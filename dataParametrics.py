@@ -1,7 +1,20 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-#print(str(pd.__version__))
+#create plot function to display data using subplot
+def plotValues(df, column):
+    plt.subplot(2, 1, 1)
+    plt.plot(df[column])
+    plt.title("Gráfico de línea")
+    plt.xlabel("Índice")
+    plt.ylabel(column)
+
+    plt.subplot(2, 1, 2)
+    plt.scatter(df.index, df[column])
+    plt.title("Gráfico de dispersión")
+    plt.xlabel("Índice")
+    plt.ylabel(column)
+
 df = pd.read_csv("BTC_Footprints_v1.csv")
 
 media = df["BTCEMI_MAX"].mean()
@@ -27,12 +40,6 @@ print("""
     CV: %f
 """ % (cv))
 
-
-df.describe()
-plt.xlabel('year')
-plt.ylabel('avg emissions')
-df.hist('BTCEMI_MAX')
-
-
+plotValues(df, "BTCEMI_MAX")
 
 plt.show()
