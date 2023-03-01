@@ -6,13 +6,13 @@ def plotValues(df, column):
     plt.subplot(2, 1, 1)
     plt.plot(df[column])
     plt.title("Gráfico de línea")
-    plt.xlabel("Índice")
+    plt.xlabel("time")
     plt.ylabel(column)
 
     plt.subplot(2, 1, 2)
     plt.scatter(df.index, df[column])
     plt.title("Gráfico de dispersión")
-    plt.xlabel("Índice")
+    plt.xlabel("time")
     plt.ylabel(column)
 
 df = pd.read_csv("BTC_Footprints_v1.csv")
