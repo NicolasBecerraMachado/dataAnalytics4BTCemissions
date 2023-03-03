@@ -1,0 +1,6 @@
+-histograma para la tendencia central
+-observaciones del histograma
+-comentar codigo
+-agregar otra variable de la base de datos
+-agregar comentarios de datos
+-eliminar "exponecial" y "función"
