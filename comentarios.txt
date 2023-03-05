@@ -1,6 +1,6 @@
--histograma para la tendencia central
--observaciones del histograma
--comentar codigo
--agregar otra variable de la base de datos
--agregar comentarios de datos
--eliminar "exponecial" y "función"
+-histograma para la tendencia central [check]
+-observaciones del histograma [check]
+-comentar codigo [check]
+-agregar otra variable de la base de datos [check]
+-agregar comentarios de datos [check]
+-eliminar "exponecial" y "función" [check]

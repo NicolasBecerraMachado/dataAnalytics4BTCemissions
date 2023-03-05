@@ -18,38 +18,41 @@ def plotValues(df, column):
 
 #######################
 #######################
-#SCRIPT FOR BTCOAL_MAX# 
+#SCRIPT FOR BTCGAS_GUE# 
 #######################
 #######################
 
 df = pd.read_csv("BTC_Footprints_v1.csv")
 
 #calculate mean, median and mode
-media = df["BTCOAL_MAX"].mean()
-mediana = df["BTCOAL_MAX"].median()
-moda = df["BTCOAL_MAX"].mode()
+media = df["BTCGAS_GUE"].mean()
+mediana = df["BTCGAS_GUE"].median()
+moda = df["BTCGAS_GUE"].mode()
 print("""
     Media: %f
     Mediana: %f
     Moda: %f
 """ % (media,mediana,moda))
 #calculate range, variance and standard deviation
-rango = df["BTCOAL_MAX"].max() - df["BTCOAL_MAX"].min()
-var = df["BTCOAL_MAX"].var(ddof=0)
-std = df["BTCOAL_MAX"].std(ddof=0)
+rango = df["BTCGAS_GUE"].max() - df["BTCGAS_GUE"].min()
+var = df["BTCGAS_GUE"].var(ddof=0)
+std = df["BTCGAS_GUE"].std(ddof=0)
 print("""
     Rango: %f
     Varianza: %f
     Desviación Estándar: %f
 """ % (rango,var,std))
 #calculate coefficient of variation
-cv = df["BTCOAL_MAX"].std(ddof=0) / df["BTCOAL_MAX"].mean() * 100
+cv = df["BTCGAS_GUE"].std(ddof=0) / df["BTCGAS_GUE"].mean() * 100
 print("""
     CV: %f
 """ % (cv))
 
 #call plot function
-plotValues(df, "BTCOAL_MAX")
+plotValues(df, "BTCGAS_GUE")
 
 #show plot
 plt.show()
+
+# for data analysis refer to 
+#    BTC C02 emissions.pptx
